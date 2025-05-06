@@ -21,6 +21,18 @@
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  input[type="text"]{
+    padding: 1em;
+    border: none;
+    background-color: white;
+    color: black;
+    width:300px;
+  }
+  button{
+    border: none;
+    padding:1em 2em;
+  }
 }
 
 .imageWords{
