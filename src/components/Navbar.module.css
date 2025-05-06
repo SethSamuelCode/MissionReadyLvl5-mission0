@@ -67,6 +67,7 @@
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 10;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -76,4 +77,8 @@
   width: 3rem;
   height: 0.3rem;
   background-color: black;
+}
+
+.mobileMenuOpen{
+    display: flex;
 }
