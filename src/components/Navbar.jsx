@@ -25,6 +25,7 @@ export default function Navbar() {
           <li>About</li>
           <li>Contact</li>
         </ul>
+        <button className={styles.buttonLogin}>LOGIN</button>
       </div>
     </nav>
   );

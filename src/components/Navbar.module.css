@@ -1,29 +1,56 @@
+
+
 .container{
+/* vars */
+    --navWordColor:#000;
+
     display: flex;
     flex-direction: row;
     height: fit-content;
     width: var(--pageWidth);
     justify-content: space-between;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
 }
 
 .left{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    h1{
+        color: var(--navWordColor)
+    }
 }
 .logo{
     width: 50px;
     height: 50px;
+    margin: 0px 20px;
+    border-radius: 50%;
 }
 
 .right{
     display: flex;
+    height: 100px;
+
+    align-items: center;
+    display: flex;
+
+    color: var(--navWordColor);
+    .buttonLogin{
+        height: fit-content;
+        padding: .25em 2em;
+        margin: 20px;
+        border: none;
+        background-color: white;
+        border: black 1px solid;
+
+    }
 }
 
 .navLinks{
     align-items: center;
     display: flex;
+    gap: 20px;
     li{
         padding: 5px 5px;
         list-style-type: none;
