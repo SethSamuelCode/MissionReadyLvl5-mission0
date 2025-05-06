@@ -25,9 +25,9 @@ export default function Home() {
           src={background}
           alt="background"
         />
-        <h1>words on a page</h1>
+        <h1 className={styles.imageWords} >words on a page</h1>
 
-        <div>
+        <div className={styles.formContainer}>
           <form onSubmit={formSubmit}>
             <input
               type="text"
