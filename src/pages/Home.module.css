@@ -18,34 +18,47 @@
 
 .formContainer {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  input[type="text"]{
+  input[type="text"] {
     padding: 1em;
     border: none;
     background-color: white;
     color: black;
-    width:300px;
+    width: 400px;
   }
-  button{
+  button {
     border: none;
-    padding:1em 2em;
+    padding: 1em 2em;
   }
+  @media screen and (max-width: 768px) {
+      white-space: nowrap;
+  }
+
 }
 
-.imageWords{
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    transform: translate(-50%, -50%); 
-    font-size: 5em;
-    max-width: 40%;
-    text-align: center;
+.imageWords {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  max-width: 50%;
+  text-align: center;
+  padding-left: 20px;
+  @media screen and (max-width: 768px) {
+    top: 35%;
+    left: 50%;
+    max-width: 100%;
+    word-break: normal;
+    white-space: nowrap;
+  }
 }
 
 .cardHolder {
+  margin-top: 20px;
   width: var(--pageWidth);
   display: flex;
   justify-content: space-evenly;
