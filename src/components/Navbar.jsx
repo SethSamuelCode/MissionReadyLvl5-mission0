@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 import styles from "./Navbar.module.css";
 import React from "react";
 
 import logo from "../assets/images/marketing_association_logo.jpg";
 
 export default function Navbar() {
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+
   return (
     <nav className={styles.container}>
       {/* // ------------------------ LEFT ------------------------ // */}
@@ -24,8 +28,15 @@ export default function Navbar() {
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
+          <li>
+            <button className={styles.buttonLogin}>LOGIN</button>
+          </li>
         </ul>
-        <button className={styles.buttonLogin}>LOGIN</button>
+        <div className={styles.hamburger}>
+          <div className={styles.hamburgerPatty}></div>
+          <div className={styles.hamburgerPatty}></div>
+          <div className={styles.hamburgerPatty}></div>
+        </div>
       </div>
     </nav>
   );

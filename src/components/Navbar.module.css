@@ -1,60 +1,79 @@
+.container {
+  /* vars */
+  --navWordColor: #000;
 
-
-.container{
-/* vars */
-    --navWordColor:#000;
-
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    width: var(--pageWidth);
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: var(--pageWidth);
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
 }
 
-.left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    h1{
-        color: var(--navWordColor)
-    }
-}
-.logo{
-    width: 50px;
-    height: 50px;
-    margin: 0px 20px;
-    border-radius: 50%;
-}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.right{
-    display: flex;
-    height: 100px;
-
-    align-items: center;
-    display: flex;
-
+  h1 {
     color: var(--navWordColor);
-    .buttonLogin{
-        height: fit-content;
-        padding: .25em 2em;
-        margin: 20px;
-        border: none;
-        background-color: white;
-        border: black 1px solid;
-        cursor: pointer;
-
-    }
+  }
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 0px 20px;
+  border-radius: 50%;
 }
 
-.navLinks{
-    align-items: center;
-    display: flex;
-    gap: 20px;
-    li{
-        padding: 5px 5px;
-        list-style-type: none;
-    }
+.right {
+  display: flex;
+  height: 100px;
+
+  align-items: center;
+  display: flex;
+
+  color: var(--navWordColor);
+  .buttonLogin {
+    height: fit-content;
+    padding: 0.25em 2em;
+    margin: 20px;
+    border: none;
+    background-color: white;
+    border: black 1px solid;
+    cursor: pointer;
+  }
 }
 
+.navLinks {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  li {
+    padding: 5px 5px;
+    list-style-type: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.hamburgerPatty {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: black;
+}

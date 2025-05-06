@@ -217,7 +217,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
+* [Kevin Huang at Medium for the article on how to make hamburger menus](https://khuang159.medium.com/creating-a-hamburger-menu-in-react-f22e5ae442cb)
 * []()
 * []()
 
