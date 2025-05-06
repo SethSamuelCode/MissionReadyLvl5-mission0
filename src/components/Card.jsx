@@ -9,7 +9,7 @@ export default function Card({ image, title, subtitle }) {
         alt=""
       />
       <div className={styles.bottomText}>
-        <p className={styles.title}  >{title}</p>
+        <p className={styles.title}>{title}</p>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
     </div>

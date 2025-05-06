@@ -2,14 +2,11 @@
 
 .container {
   display: flex;
-  position: relative;
+  flex-direction: column;
 }
 
 .bottomText {
   border: rgb(0, 255, 0) 2px solid;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
   width: 100%;
   background-color: rgb(255, 255, 255);
   opacity: 70%;

@@ -6,8 +6,17 @@
 
 }
 
+.imageArea{
+    width: var(--pageWidth);
+    img{
+        width:100%;
+        object-fit: cover;
+        max-height: 200px;
+    }
+}
+
 .cardHolder{
-    width: 90vw;
+    width: var(--pageWidth);
     display: flex;
     justify-content: space-evenly;
     gap:20px;
