@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import styles from "./Navbar.module.css";
 import React from "react";
@@ -7,29 +7,47 @@ import logo from "../assets/images/marketing_association_logo.jpg";
 
 export default function Navbar() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //navbar style
+  const [navBarStyle,setNavBarStyle] = useState(styles.navDesktop)
+
+  let timeoutId;
+  const debounceDelay = 200;
+  useEffect(() => {
+    //debounce to reduce rerenders
+    
+    function updateWidowWidth() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+        setWindowWidth(window.innerWidth);
+      }, debounceDelay);
+    }
+
+    window.addEventListener("resize", updateWidowWidth);
+
+    return () => window.removeEventListener("resize", updateWidowWidth);
+  }, []);
 
   useEffect(() => {
-    function updateWidowWidth() {
-     setWindowWidth(window.innerWidth);
-    }
     
-    window.addEventListener("resize",updateWidowWidth)
+  if(windowWidth>768){
+    setNavBarStyle(styles.navDesktop)
+  } else{
+    setNavBarStyle(styles.navMobileClosed)
+  }
 
-    return () => window.removeEventListener("resize",updateWidowWidth)
-  }, [])
+  }, [windowWidth])
   
 
-
-  let mobileNavMenuStyle=`style.mobileMenuClosed`
+  let mobileNavMenuStyle = `style.mobileMenuClosed`;
 
   function toggleMobileMenu() {
-    setHamburgerMenuOpen(!hamburgerMenuOpen)
+    setHamburgerMenuOpen(!hamburgerMenuOpen);
 
-    if(hamburgerMenuOpen){
-      mobileNavMenuStyle = mobileNavMenuStyle=`style.mobileMenuOpen`
-    } else{
-      mobileNavMenuStyle=`style.mobileMenuClosed`
+    if (hamburgerMenuOpen) {
+      setNavBarStyle(styles.navMobileOpen)
+    } else {
+      setNavBarStyle(styles.navMobileClosed)
     }
   }
 
@@ -50,7 +68,7 @@ export default function Navbar() {
       {/* // ------------------------ RIGHT ----------------------- // */}
 
       <div className={styles.right}>
-        <ul className={[styles.navLinks,mobileNavMenuStyle].join(' ') }>
+        <ul className={navBarStyle}>
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
@@ -58,7 +76,9 @@ export default function Navbar() {
             <button className={styles.buttonLogin}>LOGIN</button>
           </li>
         </ul>
-        <div className={styles.hamburger} onClick={toggleMobileMenu}>
+        <div
+          className={styles.hamburger}
+          onClick={toggleMobileMenu}>
           <div className={styles.hamburgerPatty}></div>
           <div className={styles.hamburgerPatty}></div>
           <div className={styles.hamburgerPatty}></div>

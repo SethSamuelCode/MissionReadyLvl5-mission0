@@ -45,7 +45,7 @@
   }
 }
 
-.navLinks {
+.navDesktop {
   align-items: center;
   display: flex;
   gap: 20px;
@@ -79,6 +79,10 @@
   background-color: black;
 }
 
-.mobileMenuOpen{
+.navMobileMenuOpen{
     display: flex;
+}
+
+.navMobileClosed{
+    display: none;
 }
