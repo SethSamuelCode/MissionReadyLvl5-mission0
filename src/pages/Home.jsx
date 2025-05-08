@@ -6,7 +6,7 @@ import Card from "../components/Card";
 
 
 import logo from "../assets/images/marketing_association_logo.jpg";
-import background from "../assets/images/backgroundHero.png";
+import background from "../assets/images/backgroundHero2.jpg";
 
 export default function Home() {
   const [inputSearch, setInputSearch] = useState(null)

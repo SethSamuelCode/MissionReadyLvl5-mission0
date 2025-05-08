@@ -28,6 +28,10 @@
     background-color: white;
     color: black;
     width: 400px;
+
+    @media screen and (max-width:768px) {
+      width: 200px;
+    }
   }
   button {
     border: none;
@@ -48,12 +52,14 @@
   max-width: 50%;
   text-align: center;
   padding-left: 20px;
+  color: #808080;
   @media screen and (max-width: 768px) {
     top: 35%;
     left: 50%;
     max-width: 100%;
     word-break: normal;
     white-space: nowrap;
+    font-size: 3em;
   }
 }
 
