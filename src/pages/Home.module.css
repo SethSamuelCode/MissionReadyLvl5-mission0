@@ -22,7 +22,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   
-  
+  /* stop the search bar moving under the search text box */
   form{
     display: flex;
     align-items: center;
