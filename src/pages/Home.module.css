@@ -29,7 +29,7 @@
     color: black;
     width: 400px;
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       width: 200px;
     }
   }
@@ -38,9 +38,8 @@
     padding: 1em 2em;
   }
   @media screen and (max-width: 768px) {
-      white-space: nowrap;
+    white-space: nowrap;
   }
-
 }
 
 .imageWords {
@@ -56,10 +55,9 @@
   @media screen and (max-width: 768px) {
     top: 35%;
     left: 50%;
-    max-width: 100%;
-    word-break: normal;
-    white-space: nowrap;
-    font-size: 3em;
+
+    /* word-break: normal; */
+    font-size: 2em;
   }
 }
 
