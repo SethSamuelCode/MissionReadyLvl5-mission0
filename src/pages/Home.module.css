@@ -21,6 +21,14 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  
+  form{
+    display: flex;
+    align-items: center;
+  }
+  
+
 
   input[type="text"] {
     padding: 1em;
