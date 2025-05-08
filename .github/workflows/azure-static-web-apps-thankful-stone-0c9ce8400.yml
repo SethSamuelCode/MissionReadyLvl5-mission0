@@ -47,3 +47,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_STONE_0C9CE8400 }}
           action: "close"
+          app_location: "/" # Required input, set to your app's source code path
