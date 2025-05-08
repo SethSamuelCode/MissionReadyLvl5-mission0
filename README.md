@@ -67,7 +67,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-09+104922.png)
 
 This project is the my submission for my mission 0 in mission ready level 5 Advanced Developer program.
 
@@ -100,20 +100,19 @@ You will need to install npm to build and run the website.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/SethSamuelCode/MissionReadyLvl5-mission0.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. run in dev mode
+3. run in dev mode
    ```sh
     npm run dev
    ```
-5. connect to the webste
+4. connect to the webste
     ```sh
     http://localhost:5173
     ```
