@@ -67,7 +67,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-09+104922.png)
+![Product Name Screen Shot](https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-09+104922.png)
 
 This project is the my submission for my mission 0 in mission ready level 5 Advanced Developer program.
 
