@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 import styles from "./Navbar.module.css";
-import React from "react";
 
 import logo from "../assets/images/marketing_association_logo.jpg";
 
@@ -39,8 +38,6 @@ export default function Navbar() {
   }, [windowWidth])
   
 
-  let mobileNavMenuStyle = `style.mobileMenuClosed`;
-
   function toggleMobileMenu() {
     setHamburgerMenuOpen(!hamburgerMenuOpen);
 
@@ -62,7 +59,6 @@ export default function Navbar() {
           className={styles.logo}
         />
         <h1>Marketing Association NZ </h1>
-        {windowWidth}
       </div>
 
       {/* // ------------------------ RIGHT ----------------------- // */}
