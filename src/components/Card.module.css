@@ -1,11 +1,15 @@
+/* Import Roboto font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
 
+/* Card container styles: vertical layout */
 .container {
   display: flex;
   flex-direction: column;
 }
 
+/* Bottom text area styles */
 .bottomText {
+  /* Optional border for debugging */
   /* border: rgb(0, 255, 0) 2px solid; */
   width: 100%;
   background-color: rgb(168, 168, 168);
@@ -16,6 +20,7 @@
   flex-direction: column;
 
   color: black;
+  /* Title text styles */
   .title {
     font-size: 2em;
     font-family: "Roboto", sans-serif;
@@ -25,6 +30,7 @@
     font-variation-settings: "wdth" 100;
   }
 
+  /* Subtitle text styles */
   .subtitle {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;

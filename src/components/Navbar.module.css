@@ -1,7 +1,7 @@
+/* Main navbar container: horizontal flex layout, spacing, and background */
 .container {
   /* vars */
   --navWordColor: #000;
-
   display: flex;
   flex-direction: row;
   height: fit-content;
@@ -10,15 +10,17 @@
   background-color: rgb(255, 255, 255);
 }
 
+/* Left section: logo and title, centered vertically */
 .left {
   display: flex;
   justify-content: center;
   align-items: center;
-
   h1 {
     color: var(--navWordColor);
   }
 }
+
+/* Logo image: size and circular shape */
 .logo {
   width: 50px;
   height: 50px;
@@ -26,14 +28,14 @@
   border-radius: 50%;
 }
 
+/* Right section: nav links and hamburger, vertically centered */
 .right {
   display: flex;
   height: 100px;
-
   align-items: center;
   display: flex;
-
   color: var(--navWordColor);
+  /* Login button styling */
   .buttonLogin {
     height: fit-content;
     padding: 0.25em 2em;
@@ -45,6 +47,7 @@
   }
 }
 
+/* Desktop navigation: horizontal list, hidden on small screens */
 .navDesktop {
   align-items: center;
   display: flex;
@@ -53,12 +56,12 @@
     padding: 5px 5px;
     list-style-type: none;
   }
-
   @media screen and (max-width: 768px) {
     display: none;
   }
 }
 
+/* Hamburger menu: visible only on small screens, vertical stack */
 .hamburger {
   width: 3rem;
   height: 3rem;
@@ -68,17 +71,19 @@
   flex-flow: column nowrap;
   z-index: 10;
   cursor: pointer;
-
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+
+/* Hamburger patty: horizontal bar */
 .hamburgerPatty {
   width: 3rem;
   height: 0.3rem;
   background-color: black;
 }
 
+/* Mobile nav open: vertical list, overlays content, red background */
 .navMobileOpen{
     display: flex;
     flex-direction: column;
@@ -93,6 +98,7 @@
       }
 }
 
+/* Mobile nav closed: hidden */
 .navMobileClosed{
     display: none;
 }
