@@ -1,3 +1,4 @@
+/* Container for the entire Home page layout */
 .container {
   display: flex;
   flex-direction: column;
@@ -5,10 +6,12 @@
   justify-content: center;
 }
 
+/* Area containing the main hero image and overlayed elements */
 .imageArea {
   width: var(--pageWidth);
   position: relative;
   display: flex;
+  /* Style for the hero image */
   img {
     width: 100%;
     object-fit: cover;
@@ -16,40 +19,43 @@
   }
 }
 
+/* Container for the search form, positioned over the image */
 .formContainer {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   
-  /* stop the search bar moving under the search text box */
+  /* Keep the search bar and button side by side */
   form{
     display: flex;
     align-items: center;
   }
   
-
-
+  /* Style for the search input box */
   input[type="text"] {
     padding: 1em;
     border: none;
     background-color: white;
     color: black;
     width: 400px;
-
+    /* Responsive width for smaller screens */
     @media screen and (max-width: 768px) {
       width: 200px;
     }
   }
+  /* Style for the search button */
   button {
     border: none;
     padding: 1em 2em;
   }
+  /* Prevent wrapping on small screens */
   @media screen and (max-width: 768px) {
     white-space: nowrap;
   }
 }
 
+/* Overlayed heading text on the hero image */
 .imageWords {
   position: absolute;
   top: 40%;
@@ -60,22 +66,23 @@
   text-align: center;
   padding-left: 20px;
   color: #808080;
+  /* Responsive adjustments for heading */
   @media screen and (max-width: 768px) {
     top: 35%;
     left: 50%;
-
     /* word-break: normal; */
     font-size: 2em;
   }
 }
 
+/* Container for the card components below the hero image */
 .cardHolder {
   margin-top: 20px;
   width: var(--pageWidth);
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
-
+  /* Stack cards vertically on small screens */
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
