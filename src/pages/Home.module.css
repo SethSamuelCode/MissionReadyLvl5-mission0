@@ -65,7 +65,8 @@
   max-width: 50%;
   text-align: center;
   padding-left: 20px;
-  color: #808080;
+  color: #000000;
+  text-shadow: 0 0 5px white;
   /* Responsive adjustments for heading */
   @media screen and (max-width: 768px) {
     top: 35%;

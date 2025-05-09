@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+
 /* Main navbar container: horizontal flex layout, spacing, and background */
 .container {
   /* vars */
@@ -17,6 +19,12 @@
   align-items: center;
   h1 {
     color: var(--navWordColor);
+    /* font-size: 2em; */
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
   }
 }
 
@@ -35,6 +43,12 @@
   align-items: center;
   display: flex;
   color: var(--navWordColor);
+
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   /* Login button styling */
   .buttonLogin {
     height: fit-content;
@@ -44,6 +58,12 @@
     background-color: white;
     border: black 1px solid;
     cursor: pointer;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
   }
 }
 
@@ -83,22 +103,35 @@
   background-color: black;
 }
 
-/* Mobile nav open: vertical list, overlays content, red background */
-.navMobileOpen{
+/* Mobile nav open: vertical list, overlays content */
+.navMobileOpen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* justify-content: center; */
+  align-items: center;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(204, 204, 204);
+  z-index: 11;
+  width:50%;
+  li {
+    font-size: 2em;
+    padding: 5px 5px;
+    list-style-type: none;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: red;
-    z-index: 11;
-    li {
-        padding: 5px 5px;
-        list-style-type: none;
-      }
+    justify-content: center;
+    width: 100%;
+
+  }
+  
+  li:not(:first-child){
+    border-top: black 2px solid;
+    border-width: 100%;
+  }
 }
 
 /* Mobile nav closed: hidden */
-.navMobileClosed{
-    display: none;
+.navMobileClosed {
+  display: none;
 }
