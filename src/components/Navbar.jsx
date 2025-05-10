@@ -10,15 +10,17 @@ export default function Navbar() {
   // State to track the current window width
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // State to control which navbar style is applied (desktop or mobile)
-  const [navBarStyle,setNavBarStyle] = useState(styles.navDesktop)
+  const [navBarStyle, setNavBarStyle] = useState(styles.navDesktop);
+
+  const [modalBackgroundStyle, setModalBackgroundStyle] = useState(styles.modalClosed);
 
   let timeoutId;
   const debounceDelay = 200;
   useEffect(() => {
     // Debounced window resize handler to update windowWidth
     function updateWidowWidth() {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
         setWindowWidth(window.innerWidth);
       }, debounceDelay);
     }
@@ -31,22 +33,31 @@ export default function Navbar() {
 
   useEffect(() => {
     // Switch between desktop and mobile navbar styles based on window width
-    if(windowWidth>768){
-      setNavBarStyle(styles.navDesktop)
-    } else{
-      setNavBarStyle(styles.navMobileClosed)
-    }
-  }, [windowWidth])
-  
-  // Toggle the mobile menu open/closed
-  function toggleMobileMenu() {
-    setHamburgerMenuOpen(!hamburgerMenuOpen);
-    if (hamburgerMenuOpen) {
-      setNavBarStyle(styles.navMobileOpen)
+    if (windowWidth > 768) {
+      setNavBarStyle(styles.navDesktop);
     } else {
-      setNavBarStyle(styles.navMobileClosed)
+      setNavBarStyle(styles.navMobileClosed);
     }
+  }, [windowWidth]);
+
+  // open mobile menu
+  function openMobileMenu() {
+    setHamburgerMenuOpen(true);
   }
+
+  function closeMobileMenu() {
+    setHamburgerMenuOpen(false);
+  }
+
+  useEffect(() => {
+    if (hamburgerMenuOpen) {
+      setNavBarStyle(styles.navMobileOpen);
+      setModalBackgroundStyle(styles.modalOpen);
+    } else {
+      setNavBarStyle(styles.navMobileClosed);
+      setModalBackgroundStyle(styles.modalClosed);
+    }
+  }, [hamburgerMenuOpen]);
 
   return (
     // Main navigation container
@@ -78,11 +89,14 @@ export default function Navbar() {
         {/* Hamburger menu icon for mobile */}
         <div
           className={styles.hamburger}
-          onClick={toggleMobileMenu}>
+          onClick={openMobileMenu}>
           <div className={styles.hamburgerPatty}></div>
           <div className={styles.hamburgerPatty}></div>
           <div className={styles.hamburgerPatty}></div>
         </div>
+        <div
+          className={modalBackgroundStyle}
+          onClick={closeMobileMenu}></div>
       </div>
     </nav>
   );
