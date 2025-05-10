@@ -24,7 +24,7 @@ export default function Navbar() {
         setWindowWidth(window.innerWidth);
       }, debounceDelay);
     }
-
+    //event listener to detect when the window is resized
     window.addEventListener("resize", updateWidowWidth);
 
     // Cleanup event listener on unmount
@@ -94,6 +94,7 @@ export default function Navbar() {
           <div className={styles.hamburgerPatty}></div>
           <div className={styles.hamburgerPatty}></div>
         </div>
+        {/* the back ground so you can close the menu */}
         <div
           className={modalBackgroundStyle}
           onClick={closeMobileMenu}></div>
