@@ -11,11 +11,16 @@ export default function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // State to control which navbar style is applied (desktop or mobile)
   const [navBarStyle, setNavBarStyle] = useState(styles.navDesktop);
-
+  // state to control if the mobile navbar background is shown
   const [modalBackgroundStyle, setModalBackgroundStyle] = useState(styles.modalClosed);
 
+  //to store the id of the timeout used for rate limiting the window width updates
   let timeoutId;
+  // the wait time in ms the window with has to stay steady before it updates.
+  // this is to prevent re-renders while the windows in being resized.
   const debounceDelay = 200;
+  
+  // set up the 
   useEffect(() => {
     // Debounced window resize handler to update windowWidth
     function updateWidowWidth() {
@@ -35,6 +40,7 @@ export default function Navbar() {
     // Switch between desktop and mobile navbar styles based on window width
     if (windowWidth > 768) {
       setNavBarStyle(styles.navDesktop);
+      setHamburgerMenuOpen(false);
     } else {
       setNavBarStyle(styles.navMobileClosed);
     }
@@ -48,7 +54,7 @@ export default function Navbar() {
   function closeMobileMenu() {
     setHamburgerMenuOpen(false);
   }
-
+  //use css styles to open and close the hamburger menu
   useEffect(() => {
     if (hamburgerMenuOpen) {
       setNavBarStyle(styles.navMobileOpen);
