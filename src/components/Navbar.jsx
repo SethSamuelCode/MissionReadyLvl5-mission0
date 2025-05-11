@@ -29,9 +29,9 @@ export default function Navbar() {
         setWindowWidth(window.innerWidth);
       }, debounceDelay);
     }
+
     //event listener to detect when the window is resized
     window.addEventListener("resize", updateWidowWidth);
-
     // Cleanup event listener on unmount
     return () => window.removeEventListener("resize", updateWidowWidth);
   }, []);
@@ -51,6 +51,7 @@ export default function Navbar() {
     setHamburgerMenuOpen(true);
   }
 
+  //close the hamburger menu
   function closeMobileMenu() {
     setHamburgerMenuOpen(false);
   }
