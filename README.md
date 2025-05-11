@@ -62,6 +62,7 @@
 ## About The Project
 
 This project is the my submission for my mission 0 in mission ready level 5 Advanced Developer program. \
+We were required to implement a wire frame for our mock client "Marketing Association NZ"  
 It is mobile responsive and has a side menu.
 
 ### Desktop
@@ -104,8 +105,11 @@ You will need to install npm to build and run the website.
   ```sh
   npm install npm@latest -g
   ```
+#### Optional 
+- docker 
+  installation: https://docs.docker.com/engine/install/
 
-### Installation
+### Installation in dev mode
 
 1. Clone the repo
    ```sh
@@ -124,6 +128,82 @@ You will need to install npm to build and run the website.
    http://localhost:5173
    ```
 
+### Installation in production 
+
+after installing node as above. 
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/SethSamuelCode/MissionReadyLvl5-mission0.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Build the project 
+    ```sh
+    npm run build
+    ```
+4.  you should now have a folder called "dist" in the root directory. 
+    These are the "compiled" website files and can be placed in the appropriate directory of a webserver and served to the web. 
+
+### Installation via docker 
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/SethSamuelCode/MissionReadyLvl5-mission0.git
+   ```
+2. enter the docker folder 
+    ```sh
+    cd docker
+    ```
+3. build the image
+    ```sh
+    docker build . -t mission0
+   ```
+4. Run the image to test it works
+    ```sh
+    docker --rm -it -p9090:80 mission0
+    ```
+    You can now to go http://localhost:9090 to see the website
+
+   stop the container by pressing ```crtl + c``` on your keyboard
+
+5. Deploy image to survive system reboots
+    ```sh
+    docker run --rm -d -p9090:80 --name mission0 mission0
+   ```
+   stop the container with 
+   ```sh
+   docker stop mission0 
+   ```
+
+### Installation via docker compose 
+1. Clone the repo
+   ```sh
+   git clone https://github.com/SethSamuelCode/MissionReadyLvl5-mission0.git
+   ```
+2. enter the docker folder 
+    ```sh
+    cd docker
+    ```
+3. start the docker image with docker compose
+    ```sh
+    docker compose up
+   ```
+   The website will now be visible via http://localhost:9090 
+
+    Stop the container by pressing ```crtl + c``` on your keyboard
+
+4. Deploy image to survive system reboots
+    ```sh
+    docker compose up -d
+    ```
+   stop the container with 
+   ```sh
+   docker compose down
+   ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
@@ -140,7 +220,7 @@ Seth Samuel - seths@missionreadyhq.com
 
 - [Kevin Huang at Medium for the article on how to make hamburger menus](https://khuang159.medium.com/creating-a-hamburger-menu-in-react-f22e5ae442cb)
 - [Ken Udeh for insparation on insparation for the mobile navbar](https://kenudeh.hashnode.dev/how-to-build-a-responsive-navigation-menu-with-react)
-- []()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

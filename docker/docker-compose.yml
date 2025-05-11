@@ -1,0 +1,7 @@
+services:
+  mission0:
+    build:
+      context: .
+    ports:
+      - "9090:80"
+    restart: unless-stopped
