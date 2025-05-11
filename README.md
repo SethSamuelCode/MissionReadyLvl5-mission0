@@ -1,5 +1,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a id="readme-top"></a>
+
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -7,8 +9,6 @@
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
 -->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -24,9 +24,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Seth Samuel Mission0 Level 5</h3>
 
@@ -34,11 +31,9 @@
     This is the first mission in the level 5 course. 
     <br />
     <br />
-    <a href="https://mission0.sethsamuel.dev">View Site</a>
+    <a href="https://mission0.sethsamuel.dev">View Site: https://mission0.sethsamuel.dev</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -62,29 +57,40 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-![Product Name Screen Shot](https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-09+104922.png)
+This project is the my submission for my mission 0 in mission ready level 5 Advanced Developer program. \
+It is mobile responsive and has a side menu.
 
-This project is the my submission for my mission 0 in mission ready level 5 Advanced Developer program.
+### Desktop
+
+<div align="center" >
+<img  src="https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-10+193726.png" width=80% />
+</div>
+
+### Mobile
+
+<div align="center" >
+<img  src="https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-10+193741.png" height=50% />
+</div>
+
+### Mobile menu
+<div align="center" >
+<img  src="https://f004.backblazeb2.com/file/mission-ready/Screenshot+2025-05-10+193748.png" height=50% />
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
-
 
 [![React][React.js]][React-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -93,7 +99,8 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 You will need to install npm to build and run the website.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -113,35 +120,33 @@ You will need to install npm to build and run the website.
     npm run dev
    ```
 4. connect to the webste
-    ```sh
-    http://localhost:5173
-    ```
+   ```sh
+   http://localhost:5173
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- CONTACT -->
+
 ## Contact
 
 Seth Samuel - seths@missionreadyhq.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* [Kevin Huang at Medium for the article on how to make hamburger menus](https://khuang159.medium.com/creating-a-hamburger-menu-in-react-f22e5ae442cb)
-* [Ken Udeh for insparation on insparation for the mobile navbar](https://kenudeh.hashnode.dev/how-to-build-a-responsive-navigation-menu-with-react)
-* []()
+- [Kevin Huang at Medium for the article on how to make hamburger menus](https://khuang159.medium.com/creating-a-hamburger-menu-in-react-f22e5ae442cb)
+- [Ken Udeh for insparation on insparation for the mobile navbar](https://kenudeh.hashnode.dev/how-to-build-a-responsive-navigation-menu-with-react)
+- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 [contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
@@ -170,4 +175,4 @@ Seth Samuel - seths@missionreadyhq.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
