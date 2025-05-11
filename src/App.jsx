@@ -1,3 +1,4 @@
+import About from "./pages/About";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 import { Routes, Route } from "react-router-dom";
@@ -12,6 +13,10 @@ function App() {
       <Route
         path="/test"
         element={<Test></Test>}
+      />
+      <Route
+        path="/about"
+        element={<About/>}
       />
     </Routes>
   );

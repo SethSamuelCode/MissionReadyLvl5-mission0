@@ -20,7 +20,19 @@ export default function Navbar() {
   // this is to prevent re-renders while the windows in being resized.
   const debounceDelay = 200;
   
-  // set up the 
+  //this use effect has to be above the inital set window size use effect.
+  //this is because on page load it the hamburger menu is closed so it sets the navbar style to navMobileClosed making the navbar disappear  
+  useEffect(() => {
+    if (hamburgerMenuOpen) {
+      setNavBarStyle(styles.navMobileOpen);
+      setModalBackgroundStyle(styles.modalOpen);
+    } else {
+      setNavBarStyle(styles.navMobileClosed);
+      setModalBackgroundStyle(styles.modalClosed);
+    }
+  }, [hamburgerMenuOpen]);
+
+  // set the initial window size
   useEffect(() => {
     // Debounced window resize handler to update windowWidth
     function updateWidowWidth() {
@@ -56,15 +68,7 @@ export default function Navbar() {
     setHamburgerMenuOpen(false);
   }
   //use css styles to open and close the hamburger menu
-  useEffect(() => {
-    if (hamburgerMenuOpen) {
-      setNavBarStyle(styles.navMobileOpen);
-      setModalBackgroundStyle(styles.modalOpen);
-    } else {
-      setNavBarStyle(styles.navMobileClosed);
-      setModalBackgroundStyle(styles.modalClosed);
-    }
-  }, [hamburgerMenuOpen]);
+
 
   return (
     // Main navigation container
