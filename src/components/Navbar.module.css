@@ -77,7 +77,7 @@
     list-style-type: none;
   }
 
-/* the webpage feels a little cleaner with this here  even though its not needed */
+  /* the webpage feels a little cleaner with this here  even though its not needed */
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -93,7 +93,7 @@
   flex-flow: column nowrap;
   z-index: 10;
   cursor: pointer;
-  /* this needs to be here because the hamburger needs to disapear when the screen is big  */
+  /* this needs to be here because the hamburger needs to disappear when the screen is big  */
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -117,7 +117,11 @@
   right: 0px;
   background-color: rgb(204, 204, 204);
   z-index: 11;
-  width:50%;
+  width: 50%;
+
+  animation-duration: 0.2s;
+  animation-name: openMenuAnimation;
+
   li {
     font-size: 2em;
     padding: 5px 5px;
@@ -125,12 +129,20 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
   }
-  
-  li:not(:first-child){
+
+  li:not(:first-child) {
     border-top: black 2px solid;
     border-width: 100%;
+  }
+}
+
+@keyframes openMenuAnimation {
+  from {
+    translate: 150vw 0;
+  }
+  to {
+    translate: 0 0;
   }
 }
 
@@ -139,14 +151,27 @@
   display: none;
 }
 
-.modalOpen{
+.modalOpen {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px);
   z-index: 1;
+
+  animation-duration: 0.2s;
+  animation-name: modalBlurOpen;
+}
+
+@keyframes modalBlurOpen {
+  from {
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    backdrop-filter: blur(10px);
+  }
 }
 
 .modalCLosed {
