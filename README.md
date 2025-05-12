@@ -220,6 +220,7 @@ Seth Samuel - seths@missionreadyhq.com
 
 - [Kevin Huang at Medium for the article on how to make hamburger menus](https://khuang159.medium.com/creating-a-hamburger-menu-in-react-f22e5ae442cb)
 - [Ken Udeh for insparation on insparation for the mobile navbar](https://kenudeh.hashnode.dev/how-to-build-a-responsive-navigation-menu-with-react)
+- [CSS Scan and pqina.nl/doka for the drop shadow. I used #85][https://getcssscan.com/css-box-shadow-examples]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -5,8 +5,6 @@ import styles from "./Navbar.module.css";
 import logo from "../assets/images/marketing_association_logo.jpg";
 
 export default function Navbar() {
-  // State to track if the hamburger menu is open
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
   // State to track the current window width
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // State to control which navbar style is applied (desktop or mobile)
@@ -19,20 +17,8 @@ export default function Navbar() {
   // the wait time in ms the window with has to stay steady before it updates.
   // this is to prevent re-renders while the windows in being resized.
   const debounceDelay = 200;
-  
-  //this use effect has to be above the inital set window size use effect.
-  //this is because on page load it the hamburger menu is closed so it sets the navbar style to navMobileClosed making the navbar disappear  
-  useEffect(() => {
-    if (hamburgerMenuOpen) {
-      setNavBarStyle(styles.navMobileOpen);
-      setModalBackgroundStyle(styles.modalOpen);
-    } else {
-      setNavBarStyle(styles.navMobileClosed);
-      setModalBackgroundStyle(styles.modalClosed);
-    }
-  }, [hamburgerMenuOpen]);
 
-  // set the initial window size
+  // set the initial window size, this is used for enabling and disabling the hamburger menu
   useEffect(() => {
     // Debounced window resize handler to update windowWidth
     function updateWidowWidth() {
@@ -51,8 +37,8 @@ export default function Navbar() {
   useEffect(() => {
     // Switch between desktop and mobile navbar styles based on window width
     if (windowWidth > 768) {
+      setModalBackgroundStyle(styles.modalClosed)
       setNavBarStyle(styles.navDesktop);
-      setHamburgerMenuOpen(false);
     } else {
       setNavBarStyle(styles.navMobileClosed);
     }
@@ -60,15 +46,18 @@ export default function Navbar() {
 
   // open mobile menu
   function openMobileMenu() {
-    setHamburgerMenuOpen(true);
+    // setHamburgerMenuOpen(true);
+    setNavBarStyle(styles.navMobileOpen);
+    setModalBackgroundStyle(styles.modalOpen);
   }
 
   //close the hamburger menu
   function closeMobileMenu() {
-    setHamburgerMenuOpen(false);
+    // setHamburgerMenuOpen(false);
+    setNavBarStyle(styles.navMobileClosed);
+    setModalBackgroundStyle(styles.modalClosed);
   }
   //use css styles to open and close the hamburger menu
-
 
   return (
     // Main navigation container
