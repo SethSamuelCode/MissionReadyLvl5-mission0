@@ -83,7 +83,7 @@ export default function Navbar() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li><NavLink to="/contact-us">Contact</NavLink></li>
           <li>
             {/* Login button */}
             <button className={styles.buttonLogin}>LOGIN</button>

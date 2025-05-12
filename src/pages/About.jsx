@@ -1,10 +1,13 @@
 import React from "react";
-import styles from './About.module.css'
+import styles from "./About.module.css";
 import Navbar from "../components/Navbar";
 
-
 export default function About() {
+  return(
 
-  <Navbar></Navbar>
-  return <div className={styles.title}>AboutPage</div>;
+    <div className={styles.container}>
+    <Navbar></Navbar>
+    <p className={styles.message}>About page</p>
+  </div>
+  )
 }

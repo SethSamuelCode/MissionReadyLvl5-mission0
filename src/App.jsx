@@ -14,15 +14,15 @@ function App() {
       />
       <Route
         path="/about"
-        element={<About/>}
+        element={<About />}
       />
-            <Route
+      <Route
         path="/contact-us"
-        element={<Contact/>}
+        element={<Contact />}
       />
-                  <Route
+      <Route
         path="*"
-        element={<Page404/>}
+        element={<Page404 />}
       />
     </Routes>
   );

@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
-      <div>Contact</div>
+      <p className={styles.message}>Contact Page</p>
     </div>
   );
 }
