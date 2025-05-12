@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
 import logo from "../assets/images/marketing_association_logo.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   // State to track the current window width
@@ -37,7 +38,7 @@ export default function Navbar() {
   useEffect(() => {
     // Switch between desktop and mobile navbar styles based on window width
     if (windowWidth > 768) {
-      setModalBackgroundStyle(styles.modalClosed)
+      setModalBackgroundStyle(styles.modalClosed);
       setNavBarStyle(styles.navDesktop);
     } else {
       setNavBarStyle(styles.navMobileClosed);
@@ -78,9 +79,11 @@ export default function Navbar() {
       <div className={styles.right}>
         {/* Navigation links (desktop or mobile) */}
         <ul className={navBarStyle}>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
           <li>
             {/* Login button */}
             <button className={styles.buttonLogin}>LOGIN</button>

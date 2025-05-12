@@ -65,6 +65,9 @@
     font-style: normal;
     font-variation-settings: "wdth" 100;
   }
+  .buttonLogin:hover{
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+  }
 }
 
 /* Desktop navigation: horizontal list, hidden on small screens */
@@ -75,6 +78,15 @@
   li {
     padding: 5px 5px;
     list-style-type: none;
+    a{
+      text-decoration: none;
+      color: #000;
+      padding: 1em;
+      
+    }
+      a:hover{
+          text-shadow: 0 0 2px rgb(0, 0, 0);
+      }
   }
 
   /* the webpage feels a little cleaner with this here  even though its not needed */
@@ -118,7 +130,8 @@
   background-color: rgb(204, 204, 204);
   z-index: 11;
   width: 50%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
   animation-duration: 0.2s;
   animation-name: openMenuAnimation;

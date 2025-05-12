@@ -1,8 +1,10 @@
 import React from "react";
 import styles from './About.module.css'
+import Navbar from "../components/Navbar";
 
-// Functional component that renders the About page content
+
 export default function About() {
-  // Return a simple div with text indicating this is the About page
+
+  <Navbar></Navbar>
   return <div className={styles.title}>AboutPage</div>;
 }
