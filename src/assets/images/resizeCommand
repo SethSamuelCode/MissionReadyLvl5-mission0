@@ -1,0 +1,1 @@
+ convert backgroundHero2.jpg -strip -define webp:method=6 -define webp:lossless=false -quality 50 -adaptive-resize x1920 bg.webp

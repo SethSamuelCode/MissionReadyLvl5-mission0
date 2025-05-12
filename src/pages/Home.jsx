@@ -7,7 +7,7 @@ import Card from "../components/Card";
 
 // Import images
 import logo from "../assets/images/marketing_association_logo.jpg";
-import background from "../assets/images/backgroundHero2.jpg";
+import background from "../assets/images/bg.webp";
 
 export default function Home() {
   // State for the search input
